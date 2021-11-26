@@ -1,0 +1,33 @@
+<h2 mat-dialog-title>Serie</h2>
+<form [formGroup]="serieForm" (submit)="agregarActualizarSerie()">
+  <mat-dialog-content class="mat-typography">
+    <div class="form-container">
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label> Nombre </mat-label>
+        <input matInput formControlName="nombre" >
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label> Género </mat-label>
+        <input matInput formControlName="genero" >
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label> Temporada </mat-label>
+        <input matInput formControlName="temporada" >
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label> Capitulo </mat-label>
+        <input matInput formControlName="capitulo" >
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label> Descripción </mat-label>
+        <input matInput formControlName="descripcion" >
+      </mat-form-field>
+
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-raised-button color="warn" mat-dialog-close>Cancelar</button>
+    <button mat-raised-button color="primary" type="submit">Guardar</button>
+  </mat-dialog-actions>
+</form>

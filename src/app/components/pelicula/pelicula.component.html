@@ -1,0 +1,37 @@
+<div class="container pb-4">
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end pt-4">
+    <button class="btn btn-primary" type="button" (click)="abrirDialogo()"> Agregar</button>
+  </div>
+  <div class="row pt-4" *ngFor="let item of dataSource" >
+    <div class="col-12">
+      <mat-card >
+        <mat-card-title-group>
+          <mat-card-title>{{item.nombre}}</mat-card-title>
+          <mat-card-subtitle>{{item.genero}}</mat-card-subtitle>
+
+        </mat-card-title-group>
+        <mat-card-content>
+          <div class="row">
+            <div class="col-10">
+              {{item.descripcion}}
+            </div>
+            <div class="col-1">
+              <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+            </div>
+            <div class="col-1">
+              <div class="d-grid gap-2">
+                <button class="me-md-2" mat-icon-button color="primary" (click)="editarPelicula(item)">
+                  <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button color="warn" (click)="eliminarPelicula(item.id)">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
